@@ -31,13 +31,6 @@ class Test_Hrm:
         assert self.driver.title == 'OrangeHRM'
         print("SUCCESS :The User is Logged in successfully Login_name{a} and Password {b}". format(a=data.Hrm_Data.username, b=data.Hrm_Data.password))
 
-class Test_Hrm1:
-   
-    # Generator function
-    @pytest.fixture
-    def booting_function(self):
-        self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-        yield
        
         
 # Code for Test case ID: Tc_LOGIN_02
@@ -52,15 +45,6 @@ class Test_Hrm1:
         assert self.driver.title == 'OrangeHRM'
         print("SUCCESS : Invalid credentials login_name {a} and Password {b}". format(a=data.Hrm1_Data.user_name, b=data.Hrm1_Data.pass_word))
 
-
-class Test_Hrm2:
-   
-    # Generator function
-    @pytest.fixture
-    def booting_function(self):
-        self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-        yield
-        
         
 # Code for Test case ID: Tc_PIM_01
         
@@ -83,15 +67,7 @@ class Test_Hrm2:
         assert self.driver.title == 'OrangeHRM'
         print("SUCCESS : Add new Employee Employee_name {a} and lastname {b}". format(a=data.Hrm2_Data.name, b=data.Hrm2_Data.lastname))
 
-class Test_Hrm3:
-   
-    # Generator function
-    @pytest.fixture
-    def booting_function(self):
-        self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-        yield
-        
-                
+
 # Code for Test case ID: Tc_PIM_02
 
     def test_edit_employee(self,booting_function):
@@ -114,14 +90,7 @@ class Test_Hrm3:
         assert self.driver.title == 'OrangeHRM'
         print("SUCCESS : Edit in with employeename midname {a}". format(a=data.Hrm3_Data.midname))
 
-class Test_Hrm4:
-   
-    # Generator function
-    @pytest.fixture
-    def booting_function(self):
-        self.driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-        yield
-        
+
                 
 # Code for Test case ID: Tc_PIM_03
 
